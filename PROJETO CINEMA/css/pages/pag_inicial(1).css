@@ -1,0 +1,107 @@
+main {
+  background-color: var(--dark-gray);
+  padding: 2rem 1rem;
+  color: var(--text-light);
+}
+
+/* ===== CARROSSEL ===== */
+.carrossel {
+  margin-bottom: 3rem;
+}
+
+.carrossel h2 {
+  font-size: 2rem;
+  color: var(--primary-orange);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;       /* mais largo */
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: var(--shadow-glow);
+  min-height: 250px;       /* um pouco mais alto */
+  background-color: var(--medium-gray);
+}
+
+.banner img {
+  width: 100%;
+  display: none;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: opacity var(--transition-fast);
+}
+
+.banner img.active {
+  display: block;
+}
+
+/* ===== FILMES EM CARTAZ ===== */
+.cartaz h2 {
+  font-size: 2rem;
+  color: var(--primary-orange);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.filmes {
+  display: grid;
+  gap: 4rem;
+  justify-content: center;
+}
+
+/* Desktop - 4 filmes por linha maiores */
+@media (min-width: 1024px) {
+  .filmes {
+    grid-template-columns: repeat(4, 220px); /* cards maiores */
+  }
+}
+
+/* Tela média - 2 a 3 por linha com largura flexível */
+@media (min-width: 600px) and (max-width: 1023px) {
+  .filmes {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 220px));
+  }
+}
+
+/* Telas pequenas - 1 por linha */
+@media (max-width: 599px) {
+  .filmes {
+    grid-template-columns: 1fr;
+  }
+}
+
+.filme {
+  background-color: var(--light-gray);
+  border-radius: 10px;
+  padding: 0.75rem;
+  text-align: center;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  box-shadow: var(--shadow-header);
+  max-width: 220px;    /* maior que antes */
+  width: 100%;
+  margin: 0 auto;
+}
+
+.filme:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+.filme img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+.filme p {
+  color: var(--primary-orange-light);
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 0.5rem 0 0;
+}

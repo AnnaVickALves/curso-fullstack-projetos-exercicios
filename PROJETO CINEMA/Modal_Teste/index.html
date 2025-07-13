@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tela do Administrador - Cinema</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <h1>Bem Vindo, ao CineSenac!</h1>
+    <h2>Você está na área do Administrador.</h2>
+
+    <!--MODAL CADASTRAR FILME-->
+
+    <!--Botões que abre os modais ao ser clicado-->
+    <div class="botoes-admin">
+        <button id="cadastrarfilme">Cadastrar Filme</button>
+        <button id="Verfilmes">Biblioteca de Filmes</button>
+    </div>
+
+    <div id="modalFilme" class="modal"> <!--Container do modal (fica escondido por padrão / a parte escura)-->
+        <div class="modal-conteudo"> <!--Conteúdo do modal: formulário de cadastro-->
+            <span class="fechar fechar-filme">&times;</span> <!--Ícone de fechar (X), fecha o modal ao clicar-->
+            <h1>Cadastro de Filmes</h1>
+            <form method="post" action="http://localhost/PROJETO/form_cadastro_filmes.php"
+                enctype="multipart/form-data">
+                <label>
+                    Título:
+                    <input type="text" name="titulo_filme" placeholder="Escreva o título..." required />
+                </label>
+
+                <label>
+                    Classificação indicativa:
+                    <div class="select-wrapper">
+                        <select name="classificacao_indicativa" required>
+                            <option value="" disabled selected>Selecione...</option>
+                            <option value="Livre">Livre</option>
+                            <option value="10">10 anos</option>
+                            <option value="12">12 anos</option>
+                            <option value="14">14 anos</option>
+                            <option value="16">16 anos</option>
+                            <option value="18">18 anos</option>
+                            <option value="Outro">Outro</option>
+                        </select>
+                    </div>
+                </label>
+
+                <label>
+                    Gênero:
+                    <div class="select-wrapper">
+                        <select name="genero" required>
+                            <option value="" disabled selected>Selecione...</option>
+                            <option value="Ação">Ação</option>
+                            <option value="Animação">Animação</option>
+                            <option value="Comédia">Comédia</option>
+                            <option value="Documentário">Documentário</option>
+                            <option value="Drama">Drama</option>
+                            <option value="Fantasia">Fantasia</option>
+                            <option value="Ficção Científica">Ficção Científica</option>
+                            <option value="Musical">Musical</option>
+                            <option value="Romance">Romance</option>
+                            <option value="Suspense">Suspense</option>
+                            <option value="Terror">Terror</option>
+                            <option value="Outro">Outro</option>
+                        </select>
+                    </div>
+                </label>
+
+                <label for="subgenero">Subgêneros:</label>
+                <div class="custom-multiselect">
+                    <div class="select-box" onclick="toggleCheckboxes()">
+                        <span id="selected">Selecione os subgêneros</span>
+                        <span class="arrow">&#9662;</span>
+                    </div>
+                    <div id="checkboxes" class="checkboxes">
+                        <label><input type="checkbox" value="Policial/Investigativo" /> Policial/Investigativo</label>
+                        <label><input type="checkbox" value="Romântica" /> Romântica</label>
+                        <label><input type="checkbox" value="Cômica" /> Cômica</label>
+                        <label><input type="checkbox" value="Histórica" /> Histórica</label>
+                        <label><input type="checkbox" value="Fantástica" /> Fantástica</label>
+                        <label><input type="checkbox" value="Psicológica" /> Psicológica</label>
+                        <label><input type="checkbox" value="Sobrevivência" /> Sobrevivência</label>
+                        <label><input type="checkbox" value="Musical" /> Musical</label>
+                        <label><input type="checkbox" value="Super-heróis" /> Super-heróis</label>
+                        <label><input type="checkbox" value="Biográfica / Realista" /> Biográfica / Realista</label>
+                        <label><input type="checkbox" value="Histórico" /> Histórico</label>
+                        <label><input type="checkbox" value="Outro" /> Outro</label>
+                    </div>
+                    <input type="hidden" name="sub_genero" id="sub_genero_input" />
+                </div>
+
+                <label>
+                    Duração (Minutos):
+                    <input type="number" name="duracao" placeholder="Duração em minutos" min="1" required />
+                </label>
+
+                <label>
+                    Sinopse:
+                    <textarea name="sinopse" rows="4" placeholder="Escreva a sinopse..." required></textarea>
+                </label>
+
+                <label>
+                    Pôster:
+                    <input type="file" name="poster" accept="image/*" required />
+                </label>
+
+                <label>
+                    Trailer (URL):
+                    <input type="url" name="trailer" placeholder="Link do trailer" />
+                </label>
+
+                <input type="submit" value="Enviar" name="submit" />
+            </form>
+        </div>
+    </div>
+
+    <!--MODAL BIBLIOTECA DE FILMES-->
+    <div id="modalVerfilmes" class="modal">
+        <div class="modal-conteudo">
+            <span class="fechar fechar-Verfilmes">&times;</span>
+            <h2>Biblioteca de Filmes</h2>
+            
+        </div>
+
+
+        <script src="script.js"></script>
+</body>
+
+</html>

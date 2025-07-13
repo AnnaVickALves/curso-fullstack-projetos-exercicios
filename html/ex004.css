@@ -1,0 +1,104 @@
+
+
+.divTitulo{
+    background-color: bisque;
+    margin: auto;
+    margin-bottom: 30px;
+    width: 50%;
+    text-align: center;
+
+
+}
+
+.divImg1{
+    width: 350px; 
+    height: 250px;
+    margin: 20px;
+    margin-bottom: 20px;
+    left: 9px;
+    position: relative;
+    
+   
+   
+}
+img{
+    width: 350px; 
+    height: 250px;
+    border: solid 2px;
+    border-radius: 10px;
+    margin: 10px;
+    margin-bottom: 20px;
+    left: 350px;
+    position: relative;
+   
+}
+
+.divImg2{
+    
+    width: 350px; 
+    height: 250px;
+    margin: 10px;
+    margin-bottom: 20px;
+    left: 18px;
+    position: relative;
+    top: 290px;
+   
+}
+
+
+.video1{
+    position: absolute;
+    left: 370px;
+    margin: 30px;
+}
+
+.video2{
+    position: absolute;
+    left: 390px;
+    top: 1000px;
+    
+    
+}
+
+
+.divPorto1{
+    background-color: lavender;
+    position: absolute;
+    top: 140px;
+    left: 800px;
+    width: 350px;
+}
+
+.divPorto2{
+    background-color: lavender;
+    position: absolute;
+    top: 420px;
+    left: 800px;
+    width: 350px;
+}
+
+.divManaus1{
+    background-color: lavenderblush;
+    position: absolute;
+    top: 730px;
+    left: 800px;
+    width: 350px;
+}
+
+.divManaus2{
+    background-color: lavenderblush;
+    position: absolute;
+    top: 1010px;
+    left: 800px;
+    width: 350px;
+}
+
+.texto{
+    background-color: blanchedalmond;
+    position: absolute;
+    top: 1300px;
+    left: 390px;
+    width: 50%;
+    text-align: center;
+   
+}

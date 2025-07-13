@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/perfil"
+        android:label="@string/app_name"
+        android:roundIcon="@android:drawable/btn_star_big_on"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MeuPrimerioApp"
+        tools:targetApi="31">
+        <activity
+            android:name=".MainActivitynova"
+            android:exported="false"
+            android:label="@string/title_activity_tela3"
+            android:theme="@style/Theme.MeuPrimerioApp" />
+        <activity
+            android:name=".Temperatura"
+            android:exported="false"
+            android:label="@string/title_activity_tela2"
+            android:theme="@style/Theme.MeuPrimerioApp" />
+        <activity
+            android:name=".Video"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.MeuPrimerioApp">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript_exer_001</title>
+    <script>
+        function Enviar(form)
+        {
+            var n = parseFloat(form.km.value);
+            var bandeira = 5.00;
+            var taxa = 1.50;
+            var total = bandeira+(taxa*n);
+        
+            alert("O valor da corrida é: " + total);
+        }
+
+    </script>
+</head>
+<body>
+    <h1>Olá! Bem-Vindo ao Corrida Táxi!<br> Vamos calcular o valor da sua corrida?</h1>
+
+    <form name="my form" action="" method="get">
+        Por obséquio, digite a quilometragem da corrida:
+    <input type="text" name="km">
+    <input type="button" name="button" value="calcular" onClick="Enviar(this.form)">
+
+    </form>
+</body>
+</html>

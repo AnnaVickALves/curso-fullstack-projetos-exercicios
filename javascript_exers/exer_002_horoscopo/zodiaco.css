@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+}
+
+.bg-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('IMG/zodiaco.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  opacity: 0.8;
+  z-index: -1;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.conteudo {
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.937);
+  color: #333;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+form {
+  width: 100%;
+}
+
+form label {
+  display: block;
+  text-align: left;
+  font-size: 16px;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+form input {
+  display: block;
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: border-color 0.3s;
+}
+
+form input:focus {
+  border-color: #5e9ed6;
+  outline: none;
+  box-shadow: 0 0 5px rgba(94, 158, 214, 0.5);
+}
+
+form input[type="submit"] {
+  background-color: #772da8;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+form input[type="submit"]:hover {
+  background-color: #4035b8;
+  transform: scale(1.03);
+}
